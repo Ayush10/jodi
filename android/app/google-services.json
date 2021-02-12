@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "208301200013",
+    "project_id": "jodi-63083",
+    "storage_bucket": "jodi-63083.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208301200013:android:b40b318c76b4b6225348c4",
+        "android_client_info": {
+          "package_name": "np.com.ayushojha.jodi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208301200013-old1tb5f5eslvsetmso7o1p9u39ucpjb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "np.com.ayushojha.jodi",
+            "certificate_hash": "b4c91d62b71bd668299dae54a1c241fc06103836"
+          }
+        },
+        {
+          "client_id": "208301200013-nuf7709l2bunapdhvfqn11pdp9qqgrl6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9T8qzTvV2oEDetfd97wmoAd47dWDJ4nM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208301200013-nuf7709l2bunapdhvfqn11pdp9qqgrl6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
