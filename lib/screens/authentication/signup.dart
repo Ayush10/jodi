@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:jodi/styleguide/colors.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -67,77 +68,78 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: primaryColor,
         body: SingleChildScrollView(
-      child: Container(
-        child: Column(
-          children: <Widget>[
-            Container(
-              height: 400,
-              child: Image(
-                image: AssetImage("images/login.jpg"),
-                fit: BoxFit.contain,
-              ),
-            ),
-            Container(
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      child: TextFormField(
-                          validator: (input) {
-                            if (input.isEmpty) return 'Enter Name';
-                          },
-                          decoration: InputDecoration(
-                            labelText: 'Name',
-                            prefixIcon: Icon(Icons.person),
-                          ),
-                          onSaved: (input) => _name = input),
-                    ),
-                    Container(
-                      child: TextFormField(
-                          validator: (input) {
-                            if (input.isEmpty) return 'Enter Email';
-                          },
-                          decoration: InputDecoration(
-                              labelText: 'Email',
-                              prefixIcon: Icon(Icons.email)),
-                          onSaved: (input) => _email = input),
-                    ),
-                    Container(
-                      child: TextFormField(
-                          validator: (input) {
-                            if (input.length < 6)
-                              return 'Provide Minimum 6 Character';
-                          },
-                          decoration: InputDecoration(
-                            labelText: 'Password',
-                            prefixIcon: Icon(Icons.lock),
-                          ),
-                          obscureText: true,
-                          onSaved: (input) => _password = input),
-                    ),
-                    SizedBox(height: 20),
-                    RaisedButton(
-                      padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
-                      onPressed: signUp,
-                      child: Text('SignUp',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold)),
-                      color: Colors.orange,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                      ),
-                    )
-                  ],
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: 400,
+                  child: Image(
+                    image: AssetImage("assets/images/register.png"),
+                    fit: BoxFit.contain,
+                  ),
                 ),
-              ),
+                Container(
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          child: TextFormField(
+                              validator: (input) {
+                                if (input.isEmpty) return 'Enter Name';
+                              },
+                              decoration: InputDecoration(
+                                labelText: 'Name',
+                                prefixIcon: Icon(Icons.person),
+                              ),
+                              onSaved: (input) => _name = input),
+                        ),
+                        Container(
+                          child: TextFormField(
+                              validator: (input) {
+                                if (input.isEmpty) return 'Enter Email';
+                              },
+                              decoration: InputDecoration(
+                                  labelText: 'Email',
+                                  prefixIcon: Icon(Icons.email)),
+                              onSaved: (input) => _email = input),
+                        ),
+                        Container(
+                          child: TextFormField(
+                              validator: (input) {
+                                if (input.length < 6)
+                                  return 'Provide Minimum 6 Character';
+                              },
+                              decoration: InputDecoration(
+                                labelText: 'Password',
+                                prefixIcon: Icon(Icons.lock),
+                              ),
+                              obscureText: true,
+                              onSaved: (input) => _password = input),
+                        ),
+                        SizedBox(height: 20),
+                        RaisedButton(
+                          padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
+                          onPressed: signUp,
+                          child: Text('SignUp',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold)),
+                          color: Colors.pinkAccent,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-    ));
+          ),
+        ));
   }
 }

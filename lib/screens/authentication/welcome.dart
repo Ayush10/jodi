@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:jodi/screens/authentication/login.dart';
+import 'package:jodi/screens/authentication/signup.dart';
 
 class Welcome extends StatefulWidget {
   @override
@@ -8,6 +10,14 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  navigateToLogin() async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+  }
+
+  navigateToRegister() async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +71,7 @@ class _WelcomeState extends State<Welcome> {
               children: <Widget>[
                 RaisedButton(
                   padding: EdgeInsets.symmetric(horizontal: 50, vertical: 21),
-                  onPressed: () {},
+                  onPressed: navigateToLogin,
                   child: Text(
                     'LOGIN',
                     style: TextStyle(
@@ -80,7 +90,7 @@ class _WelcomeState extends State<Welcome> {
                 ),
                 RaisedButton(
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                  onPressed: () {},
+                  onPressed: navigateToRegister,
                   child: Text(
                     'SIGN UP',
                     style: TextStyle(

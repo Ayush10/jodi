@@ -15,7 +15,7 @@ class MyInfo extends StatelessWidget {
             width: 4,
             goalCompleted: 0.9,
             child: RoundedImage(
-              imagePath: "assets/images/anne.jpeg",
+              imagePath: "assets/images/sandesh.jpg",
               size: Size.fromWidth(120.0),
             ),
           ),
@@ -26,7 +26,7 @@ class MyInfo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                "Anne Grethe",
+                "Sandesh Adhikari",
                 style: whiteNameTextStyle,
               ),
               Text(
